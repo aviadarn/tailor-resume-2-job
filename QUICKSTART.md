@@ -110,6 +110,7 @@ docker-compose up -d
 - Add more formatting options
 - Create multiple resume templates
 
+
 ## Need Help?
 
 - Check the full README.md
