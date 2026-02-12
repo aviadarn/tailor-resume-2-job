@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Tailor</title>
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0 0 15px 0;
+      color: #333;
+    }
+
+    .status {
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .status.info {
+      background-color: #e3f2fd;
+      color: #1976d2;
+    }
+
+    .status.success {
+      background-color: #e8f5e9;
+      color: #388e3c;
+    }
+
+    .status.error {
+      background-color: #ffebee;
+      color: #c62828;
+    }
+
+    .status.processing {
+      background-color: #fff3e0;
+      color: #f57c00;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover:not(:disabled) {
+      background-color: #1565c0;
+    }
+
+    button:disabled {
+      background-color: #bdbdbd;
+      cursor: not-allowed;
+    }
+
+    .spinner {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #1976d2;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .links {
+      margin-top: 15px;
+    }
+
+    .links a {
+      display: block;
+      padding: 8px;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .links a:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Resume Tailor</h1>
+
+  <div id="status" class="status info">
+    Click the button to tailor your resume to this job posting.
+  </div>
+
+  <button id="tailorBtn">
+    Tailor Resume
+  </button>
+
+  <div id="links" class="links" style="display: none;"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
